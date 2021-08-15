@@ -10,30 +10,34 @@ import SwiftUI
 struct ContentView: View {
     
     var contacts = [
-        Contact(name: "Oily", job: "cool man"),
-        Contact(name: "Bob", job: "not cool man"),
-        Contact(name: "Rick Astley", job: "pog")
+        Contact(name: "Oily", job: "not cool man"),
+        Contact(name: "Bob", job: "cool man"),
+        Contact(name: "Rick", job: "pog", brg: "Bg")
     ]
     var body: some View {
         NavigationView {
-            List(contacts) { contact in
-                NavigationLink(destination: ContactDetailView(contact:contact)) {
-                    VStack(alignment:.leading){
-                        Text(contact.name)
-                            
-                        Text(contact.job)
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
+            
+            ZStack {
+                Color.init(white: 0.1)
+                List(contacts) { contact in
+                    NavigationLink(destination: ContactDetailView(contact:contact)) {
+                        VStack(alignment:.leading){
+                            Text(contact.name)
+                                
+                            Text(contact.job)
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                        }
                     }
                 }
+                .navigationTitle("Contacts")
             }
-            .navigationTitle("Contacts")
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().preferredColorScheme(.dark)
     }
 }
