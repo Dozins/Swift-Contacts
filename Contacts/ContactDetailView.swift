@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContactDetailView: View {
-    @State var contact: Contact
+    @Binding var contact: Contact
     var body: some View {
         ZStack {
             Color.init(white: 0.1)
@@ -55,6 +55,6 @@ struct ContactDetailView: View {
 
 struct ContactDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ContactDetailView(contact: Contact(name: "Rick", job: "Youtube"))
+        ContactDetailView(contact: .constant(Contact(name: "Rick", job: "Youtube")))
     }
 }
