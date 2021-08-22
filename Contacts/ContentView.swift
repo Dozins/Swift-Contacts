@@ -19,21 +19,26 @@ struct ContentView: View {
             
             ZStack {
                 Color.init(white: 0.1)
-                List(contacts) { contact in
-                    let index = contacts.firstIndex {
-                        $0.name == contact.name
-                    }!
-                    
-                    
-                    NavigationLink(destination: ContactDetailView(contact:$contacts[index])) {
-                        VStack(alignment:.leading){
-                            Text(contact.name)
-                                
-                            Text(contact.job)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
+                List {
+                    ForEach(contacts) { contact in
+                        let index = contacts.firstIndex {
+                            $0.name == contact.name
+                        }!
+                        
+                        
+                        NavigationLink(destination: ContactDetailView(contact:$contacts[index])) {
+                            VStack(alignment:.leading){
+                                Text(contact.name)
+                                    
+                                Text(contact.job)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                            }
                         }
                     }
+                    .onDelete(perform: {indexSet in
+                        contacts.remove(atOffsets: indexSet)
+                    })
                 }
                 .navigationTitle("Contacts")
             }
