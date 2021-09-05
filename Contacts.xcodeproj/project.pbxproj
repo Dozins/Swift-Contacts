@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9512AFD726BFBC2900D437B0 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9512AFD626BFBC2800D437B0 /* ContactDetailView.swift */; };
+		955624F226D23BEC0008ECB8 /* NewContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955624F126D23BEC0008ECB8 /* NewContactView.swift */; };
 		955ADF2D26B67C020027F1A3 /* ContactsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955ADF2C26B67C020027F1A3 /* ContactsApp.swift */; };
 		955ADF2F26B67C020027F1A3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955ADF2E26B67C020027F1A3 /* ContentView.swift */; };
 		955ADF3126B67C030027F1A3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955ADF3026B67C030027F1A3 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		9512AFD626BFBC2800D437B0 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		955624F126D23BEC0008ECB8 /* NewContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewContactView.swift; sourceTree = "<group>"; };
 		955ADF2926B67C020027F1A3 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		955ADF2C26B67C020027F1A3 /* ContactsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsApp.swift; sourceTree = "<group>"; };
 		955ADF2E26B67C020027F1A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,6 +42,7 @@
 		955ADF2026B67C020027F1A3 = {
 			isa = PBXGroup;
 			children = (
+				955624F126D23BEC0008ECB8 /* NewContactView.swift */,
 				955ADF2B26B67C020027F1A3 /* Contacts */,
 				955ADF2A26B67C020027F1A3 /* Products */,
 			);
@@ -146,6 +149,7 @@
 			files = (
 				9512AFD726BFBC2900D437B0 /* ContactDetailView.swift in Sources */,
 				955ADF2F26B67C020027F1A3 /* ContentView.swift in Sources */,
+				955624F226D23BEC0008ECB8 /* NewContactView.swift in Sources */,
 				955ADF3C26B685BB0027F1A3 /* File.swift in Sources */,
 				955ADF2D26B67C020027F1A3 /* ContactsApp.swift in Sources */,
 			);

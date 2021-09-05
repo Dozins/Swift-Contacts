@@ -14,6 +14,7 @@ struct ContentView: View {
         Contact(name: "Bob", job: "cool man"),
         Contact(name: "Rick", job: "pog", brg: "Bg")
     ]
+    @State var isSheetShown = false
     var body: some View {
         NavigationView {
             
@@ -44,9 +45,14 @@ struct ContentView: View {
                     })
                 }
                 .navigationTitle("Contacts")
-                .navigationBarItems(leading: EditButton())
+                .navigationBarItems(leading: EditButton(), trailing: Button(action: {isSheetShown = true}, label: {
+                    Image(systemName: "brg")
+                }))
             }
-        }
+            .sheet(isPresented: $isSheetShown, content: {
+                NewContactView(contacts: $contacts)
+            })
+        
     }
 }
 
@@ -54,4 +60,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().preferredColorScheme(.dark)
     }
+}
 }
